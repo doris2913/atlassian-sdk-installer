@@ -1,0 +1,14 @@
+{namespace JIRA.Templates.IssueTabPanels.Comment}
+
+/**
+ * @param issueKey
+ * @param numberHiddenComments
+ */
+{template .showOlder}
+    <a class="collapsed-comments show-more-comments aui-button"
+        href="{contextPath()}/browse/{$issueKey}?page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel&showAll=true"
+        data-collapsed-count="{$numberHiddenComments}"
+    >
+        {getText('comment.showolder', $numberHiddenComments)}
+    </a>
+{/template}
